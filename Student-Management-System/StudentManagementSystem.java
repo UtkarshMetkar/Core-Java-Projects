@@ -73,7 +73,7 @@ public class StudentManagementSystem {
 
                 case 3:
                     System.out.println("Enter the roll number to search: ");
-                    int searchRollNunber = sc.nextInt();
+                    int searchRollNumber = sc.nextInt();
 
                     boolean found = false;
 
