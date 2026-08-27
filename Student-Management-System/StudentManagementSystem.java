@@ -16,10 +16,11 @@ public class StudentManagementSystem {
             System.out.println("3. Search Student");
             System.out.println("4. Exit");
 
-            System.out.println("Enter the choice: ");
+            System.out.print("Enter the choice: ");
             choice = sc.nextInt();
 
             switch (choice) {
+
                 case 1:
                     System.out.print("Enter roll number: ");
                     int rollNumber = sc.nextInt();
@@ -55,12 +56,14 @@ public class StudentManagementSystem {
                     }
 
                     break;
+
                 case 2:
                     if (students.isEmpty()) {
                         System.out.println("No students found.");
                     } else {
                         for (int i = 0; i < students.size(); i++) {
-                            Student s = students.get(i); // gets the student at that position.
+
+                            Student s = students.get(i);
 
                             System.out.println("Roll Number: " + s.rollNumber);
                             System.out.println("Name: " + s.name);
@@ -72,15 +75,16 @@ public class StudentManagementSystem {
                     break;
 
                 case 3:
-                    System.out.println("Enter the roll number to search: ");
+                    System.out.print("Enter the roll number to search: ");
                     int searchRollNumber = sc.nextInt();
 
                     boolean found = false;
 
                     for (int i = 0; i < students.size(); i++) {
+
                         Student s = students.get(i);
 
-                        if (s.rollNumber == searchRollNunber) {
+                        if (s.rollNumber == searchRollNumber) {
                             System.out.println("Student found!");
                             System.out.println("Roll Number: " + s.rollNumber);
                             System.out.println("Name: " + s.name);
@@ -96,6 +100,7 @@ public class StudentManagementSystem {
                     }
 
                     break;
+
                 case 4:
                     System.out.println("Thank you for using the Student Management System!");
                     break;
@@ -103,6 +108,7 @@ public class StudentManagementSystem {
                 default:
                     System.out.println("Invalid Choice!");
             }
+
         } while (choice != 4);
 
         sc.close();
